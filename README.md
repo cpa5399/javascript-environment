@@ -17,3 +17,9 @@ This tutorial covered several things to consider while creating a custom starter
 * Project structure
 * Production build
 * Production deploy
+
+### Development Server:
+* Simple express server
+
+### Work-In-Progress with Ngrok:
+`ngrok http -auth="<usernam>:<password>" <port>`
