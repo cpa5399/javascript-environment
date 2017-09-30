@@ -23,5 +23,8 @@ This tutorial covered several things to consider while creating a custom starter
 * WIP tunnel: https://ngrok.com/
 
 ### Automation
-* npm Scripts - https://docs.npmjs.com/misc/scripts
+* npm scripts - https://docs.npmjs.com/misc/scripts
 * scripts were added for starting the server, running a package security check, and running a tunnel through ngrok
+
+### Transpiling
+* .babelrc - preset to use the latest features
