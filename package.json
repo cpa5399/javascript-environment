@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Following along a JavaScript development environment Pluralsight course by Cory House",
   "scripts": {
+    "prestart": "node build-scripts/start-message.js",
+    "start": "npm-run-all --parallel security-check startServer",
+    "startServer": "node build-scripts/src-server.js",
+    "security-check": "nsp check",
+    "share": "npm-run-all --parallel startServer ngrok",
+    "ngrok": "ngrok http -auth='chicken:horsey' 3000"
   },
   "author": "Camille Ali",
   "license": "MIT",

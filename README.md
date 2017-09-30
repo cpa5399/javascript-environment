@@ -20,6 +20,8 @@ This tutorial covered several things to consider while creating a custom starter
 
 ### Development Server:
 * Simple express server
+* WIP tunnel: https://ngrok.com/
 
-### Work-In-Progress with Ngrok:
-`ngrok http -auth="<usernam>:<password>" <port>`
+### Automation
+* npm Scripts - https://docs.npmjs.com/misc/scripts
+* scripts were added for starting the server, running a package security check, and running a tunnel through ngrok
