@@ -28,3 +28,6 @@ This tutorial covered several things to consider while creating a custom starter
 
 ### Transpiling
 * .babelrc - preset to use the latest features
+
+### Bundling with Webpack
+* Basic config with inline source mapping
