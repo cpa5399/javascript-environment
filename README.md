@@ -31,3 +31,8 @@ This tutorial covered several things to consider while creating a custom starter
 
 ### Bundling with Webpack
 * Basic config with inline source mapping
+
+### Linting with ESLint
+* ESLint's recommended preset
+* Additional rule for `no-console`. Console statements will get flagged as warnings
+* Added an optional watch flag that can be run using `npm run lint:watch`
