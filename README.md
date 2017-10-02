@@ -36,3 +36,12 @@ This tutorial covered several things to consider while creating a custom starter
 * ESLint's recommended preset
 * Additional rule for `no-console`. Console statements will get flagged as warnings
 * Added an optional watch flag that can be run using `npm run lint:watch`
+
+### Unit Testing with Mocha
+* Chai - assertion library http://chaijs.com/
+* JSDOM - helper library, emulates DOM structure https://github.com/tmpvar/jsdom
+* Unit tests are placed alongside corresponding src files 
+* Tests are run automatically on each save
+
+### Continuous Integration with Travis CI
+* .yml added to specify node version

@@ -4,13 +4,15 @@
   "description": "Following along a JavaScript development environment Pluralsight course by Cory House",
   "scripts": {
     "prestart": "babel-node build-scripts/start-message.js",
-    "start": "npm-run-all --parallel security-check start:server lint",
+    "start": "npm-run-all --parallel security-check start:server lint test:watch",
     "start:server": "babel-node build-scripts/src-server.js",
     "lint": "esw webpack.config.* src build-scripts --color",
     "lint:watch": "npm run lint -- --watch",
     "security-check": "nsp check",
     "share": "npm-run-all --parallel start:server ngrok",
-    "ngrok": "ngrok http -auth='chicken:horsey' 3000"
+    "ngrok": "ngrok http -auth='chicken:horsey' 3000",
+    "test": "mocha --reporter progress build-scripts/test-setup.js \"src/**/*.spec.js\"",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "Camille Ali",
   "license": "MIT",
