@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import {getUsers} from './api/userApi';
+import {getUsers, deleteUser} from './api/userApi';
 import css from './index.css';
 
 getUsers().then(result => {
@@ -10,9 +10,22 @@ getUsers().then(result => {
             <td>${user.id}</td>
             <td>${user.firstName}</td>
             <td>${user.lastName}</td>
+            <td>${user.email}</td>
             </tr>`
     });
     
     global.document.getElementById('users').innerHTML = userBody;
+
+    const deleteLinks = global.document.getElementsByClassName('deleteUser');
+
+    Array.from(deleteLinks, link => {
+        link.onclick = (evt) => {
+            evt.preventDefault();
+            const element = event.target;
+            deleteUser(element.attributes["data-id"].value);
+            const row = element.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        };
+    });
 });
 

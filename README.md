@@ -45,3 +45,16 @@ This tutorial covered several things to consider while creating a custom starter
 
 ### Continuous Integration with Travis CI
 * .yml added to specify node version
+
+### Making HTTP Calls
+* Native Fetch API
+* Public facing methods for 'get' and 'delete'
+* Under the hood methods using Fetch for 'get' and 'delete'
+
+### Mock HTTP Calls
+* JSON-schema-faker was used for defining the structure of the JSON
+* JSF uses three core libraries for formatting and generating fake data:
+    * faker.js
+    * chance.js
+    * regexp
+* JSON-server was used to serve the generated JSON over HTTP to use with the mock API
