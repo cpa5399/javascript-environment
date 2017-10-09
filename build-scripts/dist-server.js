@@ -1,20 +1,18 @@
-/* Serves the src folder for development build.
-/* Uses Webpack to serve the build from memory over a server. */
+/* Serves the static dist folder for production. No longer integrates with Webpack */
 
 import express from 'express';
 import path from 'path';
-import webpack from 'webpack';
-import config from '../webpack.config.dev';
+import compression from 'compression';
 
 const port = 3000;
 const app = express();
-const compiler = webpack(config);
 
 /* eslint-disable no-console */
-app.use(require('webpack-dev-middleware')(compiler, {
-    noInfo: true,
-    publicPath: config.output.publicPath
-}));
+
+/* The following two lines are not something you would use in production.
+/*  This is to only test the production build on your local machine. */
+app.use(compression());
+app.use(express.static('dist'));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../src/index.html'));

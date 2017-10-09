@@ -58,3 +58,21 @@ This tutorial covered several things to consider while creating a custom starter
     * chance.js
     * regexp
 * JSON-server was used to serve the generated JSON over HTTP to use with the mock API
+
+### Production Builds
+* Production webpack config to output the bundle to the dist directory and enable source maps
+* Local server set up to serve from the dist directory
+* URL check for the 'useMockAPI' query string parameter to toggle the use of the mock data VS the production data
+set up with express
+* Additional npm scripts added to build/serve the bundle
+* HtmlWebpackPlugin was used to dynamically generate a minified index.html where Webpack will inject bundle scripts
+* Bundle spliting: A separate bundle was created for vendor libraries so that they can be cached separately
+    * The CommonsChunkPlugin is responsible for ensuring that files in the vendor bundle only get downloaded in that
+    bundle and not the main bundle
+* Cache busting - 
+    * MD5 hashes are added to the bundle names so that the names only changes when updates to the code are made. 
+    Because of HTMLWebpackPlugin, the HTML dynamically updates with the new file names.
+    * Cache busting/source mapping was also enabled for CSS
+* Error logging - TrackJS 
+    * EJS conditional added to only add the tracking script in the production build
+

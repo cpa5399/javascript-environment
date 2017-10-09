@@ -1,5 +1,7 @@
+/* Uses the mock schema and json-schema-faker to write fake generated data to db.json */
+
 import jsf from 'json-schema-faker';
-import {schema} from './mockDataSchema';
+import {schema} from './mock-data-schema';
 import fs from 'fs';
 import chalk from 'chalk'
 

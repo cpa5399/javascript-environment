@@ -1,3 +1,4 @@
+/* API for retrieving and deleting users. Private facing getters/setters uses the Fetch API.  */
 import 'whatwg-fetch';
 import getBaseUrl from './base-url';
 
