@@ -75,4 +75,13 @@ set up with express
     * Cache busting/source mapping was also enabled for CSS
 * Error logging - TrackJS 
     * EJS conditional added to only add the tracking script in the production build
+    
+### Production Deploy
+* Starter, bare bones API located here: https://github.com/cpa5399/js-dev-env-demo-api
+* Using Heroku to host the the API: https://batman-chicken.herokuapp.com/
+* Modified `getBaseUrl` to switch to the heroku URL for production if the query string param isn't appended
+* Added a script to deploy the UI to Surge: http://mysterious-bushes.surge.sh/
+* Separation of concerns: the API and UI are now hosted separately 
+
+
 

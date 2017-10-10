@@ -1,8 +1,8 @@
-/* If the useMockApi query parameter is set to true, use the json-schema mock data, otherwise use production data 
+/* If the useMockApi query parameter is set to true, use the json-schema mock data, otherwise use production data
  set in the express set up */
 
 const getBaseUrl = () => {
-    return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : '/';
+    return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : 'https://batman-chicken.herokuapp.com/';
 };
 
 // Returns true if name is 'useMockApi', null if not, empty string if set to false
